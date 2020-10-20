@@ -1,0 +1,21 @@
+:host {
+    display: block;
+}
+
+.card {
+    -webkit-box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 43px -18px rgba(0, 0, 0, 0.75);
+
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+}
+
+.matched {
+    background: green;
+}
