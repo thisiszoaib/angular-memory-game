@@ -1,6 +1,12 @@
-<h1 class="text-center">Memory Game</h1>
-
-<div class="grid p-16">
-  <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
-  </app-game-card>
+<mat-toolbar color="primary" class="text-center">
+  Card Memory Game
+</mat-toolbar>
+<div class="p-16">
+  <p class="text-center">Tap on a card to flip it. You can only flip a maximum of two cards at a time. A match will
+    remove
+    those cards!</p>
+  <div class="grid p-16">
+    <app-game-card *ngFor="let c of cards; let idx=index" [data]="c" (cardClicked)="cardClicked(idx)">
+    </app-game-card>
+  </div>
 </div>

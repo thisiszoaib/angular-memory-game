@@ -1,3 +1,8 @@
-<div class="card p-16" [ngClass]="{ 'matched': data.state === 'matched', 'flipped' : data.state === 'flipped' }">
-    <span>Game Card {{data.cardId}}</span>
+<div class="card" (click)="cardClicked.emit()" [@cardFlip]="data.state">
+    <div class="back">
+        <img src="assets/card-back.jpg">
+    </div>
+    <div class="front">
+        <img [src]="'https://source.unsplash.com/' + data.imageId + '/200x300'">
+    </div>
 </div>
