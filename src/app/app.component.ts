@@ -65,6 +65,11 @@ export class AppComponent implements OnInit {
         this.checkForCardMatch();
       }
 
+      if (this.flippedCards.length > 2) {
+        cardInfo.state = 'default';
+        this.flippedCards.pop();        
+      }
+
     } else if (cardInfo.state === 'flipped') {
       cardInfo.state = 'default';
       this.flippedCards.pop();
