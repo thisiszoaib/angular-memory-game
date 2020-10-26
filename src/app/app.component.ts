@@ -57,9 +57,7 @@ export class AppComponent implements OnInit {
   cardClicked(index: number): void {
     const cardInfo = this.cards[index];
 
-    if (this.flippedCards.length <2) {
-
-      if (cardInfo.state === 'default') {
+      if (cardInfo.state === 'default' && this.flippedCards.length < 2) {
         cardInfo.state = 'flipped';
         this.flippedCards.push(cardInfo);
 
@@ -71,7 +69,6 @@ export class AppComponent implements OnInit {
       cardInfo.state = 'default';
       this.flippedCards.pop();
     
-      }
     }
   }
 
