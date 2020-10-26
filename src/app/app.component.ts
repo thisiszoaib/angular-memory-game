@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
     this.setupCards();
   }
 
-  setupCards(): void {
+   setupCards(): void {
     this.cards = [];
     this.cardImages.forEach((image) => {
       const cardData: CardData = {
@@ -57,22 +57,21 @@ export class AppComponent implements OnInit {
   cardClicked(index: number): void {
     const cardInfo = this.cards[index];
 
-    if (cardInfo.state === 'default') {
-      cardInfo.state = 'flipped';
-      this.flippedCards.push(cardInfo);
+    if (this.flippedCards.length <2) {
 
-      if (this.flippedCards.length > 1) {
-        this.checkForCardMatch();
-      }
+      if (cardInfo.state === 'default') {
+        cardInfo.state = 'flipped';
+        this.flippedCards.push(cardInfo);
 
-      if (this.flippedCards.length > 2) {
-        cardInfo.state = 'default';
-        this.flippedCards.pop();        
-      }
+        if (this.flippedCards.length > 1) {
+          this.checkForCardMatch();
+        }
 
     } else if (cardInfo.state === 'flipped') {
       cardInfo.state = 'default';
       this.flippedCards.pop();
+    
+      }
     }
   }
 
