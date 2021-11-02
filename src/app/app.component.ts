@@ -62,7 +62,7 @@ export class AppComponent implements OnInit {
         cardInfo.state = 'flipped';
         this.flippedCards.push(cardInfo);
 
-        if (this.flippedCards.length > 1) {
+        if (this.flippedCards.length === 2) {
           this.checkForCardMatch();
         }
 
