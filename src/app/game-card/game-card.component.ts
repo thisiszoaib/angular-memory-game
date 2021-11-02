@@ -15,7 +15,6 @@ import { CardData } from '../card-data.model';
         transform: 'perspective(600px) rotateY(180deg)'
       })),
       state('matched', style({
-        visibility: 'false',
         transform: 'scale(0.05)',
         opacity: 0
       })),
